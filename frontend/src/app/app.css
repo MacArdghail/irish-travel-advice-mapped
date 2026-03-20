@@ -1,0 +1,15 @@
+.country-item[data-status="normal-precautions"] {
+  background-color: #00ba42;
+}
+
+.country-item[data-status="high-degree-of-caution"] {
+  background-color: #ffc300;
+}
+
+.country-item[data-status="avoid-non-essential-travel"] {
+  background-color: #f07400;
+}
+
+.country-item[data-status="do-not-travel"] {
+  background-color:  #f00000;
+}

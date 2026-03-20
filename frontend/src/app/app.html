@@ -1,0 +1,13 @@
+<h1>Irish Travel Advice Mapped</h1>
+@for (country of countries; track country.slug; let i = $index) {
+  <div class="country-item" [attr.data-status]="country.status">
+    <span class="country-name"> {{i + 1}}: {{ 'countries.' + country.slug | translate }}</span>
+    <span class="country-status"> {{ 'levels.' + country.status | translate }}</span>
+  </div>
+}
+
+@if (lastUpdated) {
+  <p>Last updated: {{ lastUpdated }}</p>
+}
+
+<router-outlet />

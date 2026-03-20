@@ -1,0 +1,854 @@
+{
+  "levels": {
+    "normal-precautions": "Gnáth-Réamhchúraimí",
+    "high-degree-of-caution": "Bí an-chúramach",
+    "avoid-non-essential-travel": "Seachain Taisteal Neamhriachtanach",
+    "do-not-travel": "Ná Taistil"
+  },
+  "countries": {
+    "marshall-islands": {
+      "name": "Na Hoileain Marshall",
+      "slug": "na-hoileain-marshall"
+    },
+    "oman": {
+      "name": "Oman",
+      "slug": "oman"
+    },
+    "liechtenstein": {
+      "name": "Lichtinstein",
+      "slug": "lichtinstein"
+    },
+    "eritrea": {
+      "name": "An Eiritre",
+      "slug": "an-eiritre"
+    },
+    "ecuador": {
+      "name": "Eacuador",
+      "slug": "eacuador"
+    },
+    "luxembourg": {
+      "name": "Lucsamburg",
+      "slug": "lucsamburg"
+    },
+    "afghanistan": {
+      "name": "An Afganastain",
+      "slug": "an-afganastain"
+    },
+    "slovenia": {
+      "name": "An Tsloivein",
+      "slug": "an-tsloivein"
+    },
+    "lithuania": {
+      "name": "An Liotuain",
+      "slug": "an-liotuain"
+    },
+    "turkmenistan": {
+      "name": "An Tuircmeanastain",
+      "slug": "an-tuircmeanastain"
+    },
+    "seychelles": {
+      "name": "Na Seiseil",
+      "slug": "na-seiseil"
+    },
+    "mongolia": {
+      "name": "An Mhongoil",
+      "slug": "an-mhongoil"
+    },
+    "yemen": {
+      "name": "Eimin",
+      "slug": "eimin"
+    },
+    "cuba": {
+      "name": "Cuba",
+      "slug": "cuba"
+    },
+    "guinea": {
+      "name": "An Ghuine",
+      "slug": "an-ghuine"
+    },
+    "poland": {
+      "name": "An Pholainn",
+      "slug": "an-pholainn"
+    },
+    "senegal": {
+      "name": "An Tseineagail",
+      "slug": "an-tseineagail"
+    },
+    "greece": {
+      "name": "An Ghreig",
+      "slug": "an-ghreig"
+    },
+    "brunei-darussalam": {
+      "name": "Bruine Darasalam",
+      "slug": "bruine-darasalam"
+    },
+    "tajikistan": {
+      "name": "An Taidsiceastain",
+      "slug": "an-taidsiceastain"
+    },
+    "sierra-leone": {
+      "name": "Siarra Leon",
+      "slug": "siarra-leon"
+    },
+    "mauritius": {
+      "name": "Oilean Mhuiris",
+      "slug": "oilean-mhuiris"
+    },
+    "madagascar": {
+      "name": "Madagascar",
+      "slug": "madagascar"
+    },
+    "equatorial-guinea": {
+      "name": "An Ghuine Mheanchiorclach",
+      "slug": "an-ghuine-mheanchiorclach"
+    },
+    "nepal": {
+      "name": "Neipeal",
+      "slug": "neipeal"
+    },
+    "colombia": {
+      "name": "An Choloim",
+      "slug": "an-choloim"
+    },
+    "hungary": {
+      "name": "An Ungair",
+      "slug": "an-ungair"
+    },
+    "argentina": {
+      "name": "An Airgintin",
+      "slug": "an-airgintin"
+    },
+    "ukraine": {
+      "name": "An Ucrain",
+      "slug": "an-ucrain"
+    },
+    "canada": {
+      "name": "Ceanada",
+      "slug": "ceanada"
+    },
+    "somalia": {
+      "name": "An Tsomail",
+      "slug": "an-tsomail"
+    },
+    "republic-of-the-gambia": {
+      "name": "An Ghaimbia",
+      "slug": "an-ghaimbia"
+    },
+    "cape-verde": {
+      "name": "Rinn Verde",
+      "slug": "rinn-verde"
+    },
+    "zambia": {
+      "name": "An Tsaimbia",
+      "slug": "an-tsaimbia"
+    },
+    "moldova": {
+      "name": "An Mholdoiv",
+      "slug": "an-mholdoiv"
+    },
+    "trinidad-and-tobago": {
+      "name": "Oilean Na Trionoide Tobaga",
+      "slug": "oilean-na-trionoide-tobaga"
+    },
+    "philippines": {
+      "name": "Na Hoileain Fhilipineacha",
+      "slug": "na-hoileain-fhilipineacha"
+    },
+    "benin": {
+      "name": "Beinin",
+      "slug": "beinin"
+    },
+    "myanmar-burma": {
+      "name": "Maenmar Burma",
+      "slug": "maenmar-burma"
+    },
+    "iceland": {
+      "name": "An Ioslainn",
+      "slug": "an-ioslainn"
+    },
+    "niger": {
+      "name": "Niger",
+      "slug": "niger"
+    },
+    "republic-of-north-macedonia": {
+      "name": "Poblacht Na Macadoine",
+      "slug": "poblacht-na-macadoine"
+    },
+    "burkina-faso": {
+      "name": "Buircine Faso",
+      "slug": "buircine-faso"
+    },
+    "malaysia": {
+      "name": "An Mhalaeisia",
+      "slug": "an-mhalaeisia"
+    },
+    "pakistan": {
+      "name": "An Phacastain",
+      "slug": "an-phacastain"
+    },
+    "cayman-islands": {
+      "name": "Oileain Cayman",
+      "slug": "oileain-cayman"
+    },
+    "samoa": {
+      "name": "Samo",
+      "slug": "samo"
+    },
+    "uruguay": {
+      "name": "Uragua",
+      "slug": "uragua"
+    },
+    "gabon": {
+      "name": "An Ghabuin",
+      "slug": "an-ghabuin"
+    },
+    "uzbekistan": {
+      "name": "An Uisbeiceastain",
+      "slug": "an-uisbeiceastain"
+    },
+    "morocco": {
+      "name": "Maraco",
+      "slug": "maraco"
+    },
+    "mali": {
+      "name": "Maili",
+      "slug": "maili"
+    },
+    "bosnia-and-herzegovina": {
+      "name": "An Bhoisnia Agus An Heirseagaivein",
+      "slug": "an-bhoisnia-agus-an-heirseagaivein"
+    },
+    "zimbabwe": {
+      "name": "An Tsiombaib",
+      "slug": "an-tsiombaib"
+    },
+    "estonia": {
+      "name": "An Eastoin",
+      "slug": "an-eastoin"
+    },
+    "niue": {
+      "name": "Niue",
+      "slug": "niue"
+    },
+    "paraguay": {
+      "name": "Paragua",
+      "slug": "paragua"
+    },
+    "united-states-of-america": {
+      "name": "Stait Aontaithe Mheiricea",
+      "slug": "stait-aontaithe-mheiricea"
+    },
+    "liberia": {
+      "name": "An Libeir",
+      "slug": "an-libeir"
+    },
+    "martinique": {
+      "name": "Martinique",
+      "slug": "martinique"
+    },
+    "namibia": {
+      "name": "An Namaib",
+      "slug": "an-namaib"
+    },
+    "dominican-republic": {
+      "name": "An Phoblacht Dhoiminiceach",
+      "slug": "an-phoblacht-dhoiminiceach"
+    },
+    "vietnam": {
+      "name": "Vitneam",
+      "slug": "vitneam"
+    },
+    "democratic-republic-of-congo": {
+      "name": "Poblacht Dhaonlathach An Chongo",
+      "slug": "poblacht-dhaonlathach-an-chongo"
+    },
+    "bhutan": {
+      "name": "An Bhutain",
+      "slug": "an-bhutain"
+    },
+    "mozambique": {
+      "name": "Mosaimbic",
+      "slug": "mosaimbic"
+    },
+    "armenia": {
+      "name": "An Airmein",
+      "slug": "an-airmein"
+    },
+    "peru": {
+      "name": "Peiriu",
+      "slug": "peiriu"
+    },
+    "mauritania": {
+      "name": "An Mharatain",
+      "slug": "an-mharatain"
+    },
+    "ghana": {
+      "name": "Gana",
+      "slug": "gana"
+    },
+    "singapore": {
+      "name": "Singeapor",
+      "slug": "singeapor"
+    },
+    "saint-kitts-and-nevis": {
+      "name": "San Criostoir Nimheas",
+      "slug": "san-criostoir-nimheas"
+    },
+    "republic-of-korea": {
+      "name": "An Choire Theas",
+      "slug": "an-choire-theas"
+    },
+    "malta": {
+      "name": "Malta",
+      "slug": "malta"
+    },
+    "papua-new-guinea": {
+      "name": "Nua Ghuine Phapua",
+      "slug": "nua-ghuine-phapua"
+    },
+    "chad": {
+      "name": "Sead",
+      "slug": "sead"
+    },
+    "venezuela": {
+      "name": "Veiniseala",
+      "slug": "veiniseala"
+    },
+    "ethiopia": {
+      "name": "An Aetoip",
+      "slug": "an-aetoip"
+    },
+    "albania": {
+      "name": "An Albain",
+      "slug": "an-albain"
+    },
+    "reunion": {
+      "name": "La Reunion",
+      "slug": "la-reunion"
+    },
+    "vanuatu": {
+      "name": "Vanuatu",
+      "slug": "vanuatu"
+    },
+    "egypt": {
+      "name": "An Eigipt",
+      "slug": "an-eigipt"
+    },
+    "botswana": {
+      "name": "An Bhotsuain",
+      "slug": "an-bhotsuain"
+    },
+    "rwanda": {
+      "name": "Ruanda",
+      "slug": "ruanda"
+    },
+    "syria": {
+      "name": "An Tsiria",
+      "slug": "an-tsiria"
+    },
+    "france": {
+      "name": "An Fhrainc",
+      "slug": "an-fhrainc"
+    },
+    "barbados": {
+      "name": "Barbados",
+      "slug": "barbados"
+    },
+    "iran": {
+      "name": "An Iarain",
+      "slug": "an-iarain"
+    },
+    "mayotte": {
+      "name": "Mayotte",
+      "slug": "mayotte"
+    },
+    "cote-divoire": {
+      "name": "An Costa Eabhair",
+      "slug": "an-costa-eabhair"
+    },
+    "jamaica": {
+      "name": "Iamaice",
+      "slug": "iamaice"
+    },
+    "comoros": {
+      "name": "Oileain Chomora",
+      "slug": "oileain-chomora"
+    },
+    "fiji": {
+      "name": "Fidsi",
+      "slug": "fidsi"
+    },
+    "kosovo": {
+      "name": "An Chosaiv",
+      "slug": "an-chosaiv"
+    },
+    "democratic-republic-of-korea": {
+      "name": "An Choire Thuaidh",
+      "slug": "an-choire-thuaidh"
+    },
+    "nigeria": {
+      "name": "An Nigeir",
+      "slug": "an-nigeir"
+    },
+    "taiwan": {
+      "name": "Teavain",
+      "slug": "teavain"
+    },
+    "china-hong-kong-macao": {
+      "name": "An Tsin Hong Cong Macao",
+      "slug": "an-tsin-hong-cong-macao"
+    },
+    "guyana": {
+      "name": "An Ghuain",
+      "slug": "an-ghuain"
+    },
+    "grenada": {
+      "name": "Greanada",
+      "slug": "greanada"
+    },
+    "romania": {
+      "name": "An Romain",
+      "slug": "an-romain"
+    },
+    "bahrain": {
+      "name": "Bairein",
+      "slug": "bairein"
+    },
+    "cameroon": {
+      "name": "Camarun",
+      "slug": "camarun"
+    },
+    "anguilla": {
+      "name": "Angaile",
+      "slug": "angaile"
+    },
+    "sudan": {
+      "name": "An Tsudain",
+      "slug": "an-tsudain"
+    },
+    "angola": {
+      "name": "Angola",
+      "slug": "angola"
+    },
+    "montenegro": {
+      "name": "Montaineagro",
+      "slug": "montaineagro"
+    },
+    "saint-tome-sao-tome-and-principe": {
+      "name": "Sao Tome Agus Principe",
+      "slug": "sao-tome-agus-principe"
+    },
+    "guatemala": {
+      "name": "Guatamala",
+      "slug": "guatamala"
+    },
+    "suriname": {
+      "name": "Suranam",
+      "slug": "suranam"
+    },
+    "palau": {
+      "name": "Na Hoileain Palau",
+      "slug": "na-hoileain-palau"
+    },
+    "bangladesh": {
+      "name": "An Bhanglaideis",
+      "slug": "an-bhanglaideis"
+    },
+    "cyprus": {
+      "name": "An Chipir",
+      "slug": "an-chipir"
+    },
+    "cambodia": {
+      "name": "An Chamboid",
+      "slug": "an-chamboid"
+    },
+    "tanzania": {
+      "name": "An Tansain",
+      "slug": "an-tansain"
+    },
+    "saint-lucia": {
+      "name": "Saint Lucia",
+      "slug": "saint-lucia"
+    },
+    "panama": {
+      "name": "Panama",
+      "slug": "panama"
+    },
+    "togo": {
+      "name": "Toga",
+      "slug": "toga"
+    },
+    "burundi": {
+      "name": "An Bhuruin",
+      "slug": "an-bhuruin"
+    },
+    "latvia": {
+      "name": "An Laitvia",
+      "slug": "an-laitvia"
+    },
+    "austria": {
+      "name": "An Ostair",
+      "slug": "an-ostair"
+    },
+    "slovak-republic-slovakia": {
+      "name": "An Tslovaic",
+      "slug": "an-tslovaic"
+    },
+    "thailand": {
+      "name": "An Tealainn",
+      "slug": "an-tealainn"
+    },
+    "sweden": {
+      "name": "An Tsualainn",
+      "slug": "an-tsualainn"
+    },
+    "lebanon": {
+      "name": "An Liobain",
+      "slug": "an-liobain"
+    },
+    "greenland": {
+      "name": "An Ghraonlainn",
+      "slug": "an-ghraonlainn"
+    },
+    "the-netherlands": {
+      "name": "An Isiltir",
+      "slug": "an-isiltir"
+    },
+    "uganda": {
+      "name": "Uganda",
+      "slug": "uganda"
+    },
+    "eswatini": {
+      "name": "An Tsuasalainn",
+      "slug": "an-tsuasalainn"
+    },
+    "indonesia": {
+      "name": "An Indineis",
+      "slug": "an-indineis"
+    },
+    "russian-federation": {
+      "name": "Conaidhm Na Ruise",
+      "slug": "conaidhm-na-ruise"
+    },
+    "united-arab-emirates": {
+      "name": "Aontas Na Neimiriochtai Arabacha",
+      "slug": "aontas-na-neimiriochtai-arabacha"
+    },
+    "libya": {
+      "name": "An Libia",
+      "slug": "an-libia"
+    },
+    "bahamas": {
+      "name": "Na Bahamai",
+      "slug": "na-bahamai"
+    },
+    "great-britain": {
+      "name": "An Bhreatain Mhor",
+      "slug": "an-bhreatain-mhor"
+    },
+    "kyrgyzstan": {
+      "name": "An Chirgeastain",
+      "slug": "an-chirgeastain"
+    },
+    "italy": {
+      "name": "An Iodail",
+      "slug": "an-iodail"
+    },
+    "denmark": {
+      "name": "An Danmhairg",
+      "slug": "an-danmhairg"
+    },
+    "bermuda": {
+      "name": "Beirmiuda",
+      "slug": "beirmiuda"
+    },
+    "monaco": {
+      "name": "Monaco",
+      "slug": "monaco"
+    },
+    "dominica": {
+      "name": "Doiminice",
+      "slug": "doiminice"
+    },
+    "jordan": {
+      "name": "An Iordain",
+      "slug": "an-iordain"
+    },
+    "saint-vincent-and-the-grenadines": {
+      "name": "San Uinseann Agus Na Greanaidini",
+      "slug": "san-uinseann-agus-na-greanaidini"
+    },
+    "bulgaria": {
+      "name": "An Bhulgair",
+      "slug": "an-bhulgair"
+    },
+    "montserrat": {
+      "name": "Montsarat",
+      "slug": "montsarat"
+    },
+    "bolivia": {
+      "name": "An Bholaiv",
+      "slug": "an-bholaiv"
+    },
+    "india": {
+      "name": "An India",
+      "slug": "an-india"
+    },
+    "nicaragua": {
+      "name": "Nicearagua",
+      "slug": "nicearagua"
+    },
+    "french-guiana": {
+      "name": "Guain Na Fraince",
+      "slug": "guain-na-fraince"
+    },
+    "serbia": {
+      "name": "An Tseirbia",
+      "slug": "an-tseirbia"
+    },
+    "cook-islands": {
+      "name": "Na Hoileain Cook",
+      "slug": "na-hoileain-cook"
+    },
+    "belgium": {
+      "name": "An Bheilg",
+      "slug": "an-bheilg"
+    },
+    "sri-lanka": {
+      "name": "Sri Lanca",
+      "slug": "sri-lanca"
+    },
+    "haiti": {
+      "name": "Haiti",
+      "slug": "haiti"
+    },
+    "kiribati": {
+      "name": "Ciribeas",
+      "slug": "ciribeas"
+    },
+    "iraq": {
+      "name": "An Iaraic",
+      "slug": "an-iaraic"
+    },
+    "finland": {
+      "name": "An Fhionlainn",
+      "slug": "an-fhionlainn"
+    },
+    "czech-republic": {
+      "name": "Poblacht Na Seice",
+      "slug": "poblacht-na-seice"
+    },
+    "norway": {
+      "name": "An Iorua",
+      "slug": "an-iorua"
+    },
+    "guadeloupe": {
+      "name": "Guadaluip",
+      "slug": "guadaluip"
+    },
+    "chile": {
+      "name": "An Tsile",
+      "slug": "an-tsile"
+    },
+    "tonga": {
+      "name": "Tonga",
+      "slug": "tonga"
+    },
+    "kazakhstan": {
+      "name": "An Chasacstain",
+      "slug": "an-chasacstain"
+    },
+    "andorra": {
+      "name": "Andora",
+      "slug": "andora"
+    },
+    "faroe-islands": {
+      "name": "Oileain Fharo",
+      "slug": "oileain-fharo"
+    },
+    "china": {
+      "name": "An Tsin",
+      "slug": "an-tsin"
+    },
+    "lesotho": {
+      "name": "Leosota",
+      "slug": "leosota"
+    },
+    "djibouti": {
+      "name": "Djibouti",
+      "slug": "djibouti"
+    },
+    "portugal": {
+      "name": "An Phortaingeil",
+      "slug": "an-phortaingeil"
+    },
+    "brazil": {
+      "name": "An Bhrasail",
+      "slug": "an-bhrasail"
+    },
+    "kenya": {
+      "name": "An Cheinia",
+      "slug": "an-cheinia"
+    },
+    "israel": {
+      "name": "Iosrael Agus Na Criocha Faoi Fhorghabhail",
+      "slug": "iosrael-agus-na-criocha-faoi-fhorghabhail"
+    },
+    "spain": {
+      "name": "An Spainn",
+      "slug": "an-spainn"
+    },
+    "south-africa": {
+      "name": "An Afraic Theas",
+      "slug": "an-afraic-theas"
+    },
+    "switzerland": {
+      "name": "An Eilveis",
+      "slug": "an-eilveis"
+    },
+    "costa-rica": {
+      "name": "Costa Rice",
+      "slug": "costa-rice"
+    },
+    "south-sudan": {
+      "name": "An Tsudain Theas",
+      "slug": "an-tsudain-theas"
+    },
+    "malawi": {
+      "name": "An Mhalaiv",
+      "slug": "an-mhalaiv"
+    },
+    "maldives": {
+      "name": "Oileain Mhaildive",
+      "slug": "oileain-mhaildive"
+    },
+    "federated-states-of-micronesia": {
+      "name": "Na Stait Chonaidhme Na Micrineise",
+      "slug": "na-stait-chonaidhme-na-micrineise"
+    },
+    "solomon-islands": {
+      "name": "Oileain Sholomon",
+      "slug": "oileain-sholomon"
+    },
+    "guinea-bissau": {
+      "name": "Guine Bissau",
+      "slug": "guine-bissau"
+    },
+    "laos": {
+      "name": "Laos",
+      "slug": "laos"
+    },
+    "virgin-islands-us": {
+      "name": "Oileain Mhaighdean Na Stat Aontaithe",
+      "slug": "oileain-mhaighdean-na-stat-aontaithe"
+    },
+    "georgia": {
+      "name": "An Tseoirsia",
+      "slug": "an-tseoirsia"
+    },
+    "algeria": {
+      "name": "An Ailgeir",
+      "slug": "an-ailgeir"
+    },
+    "belize": {
+      "name": "An Bheilis",
+      "slug": "an-bheilis"
+    },
+    "turks-and-caicos-islands": {
+      "name": "Oileain Na Dturcach Agus Caicos",
+      "slug": "oileain-na-dturcach-agus-caicos"
+    },
+    "timor-leste": {
+      "name": "Tiomor Leste",
+      "slug": "tiomor-leste"
+    },
+    "nauru": {
+      "name": "Naru",
+      "slug": "naru"
+    },
+    "kuwait": {
+      "name": "Cuait",
+      "slug": "cuait"
+    },
+    "el-salvador": {
+      "name": "An Tsalvadoir",
+      "slug": "an-tsalvadoir"
+    },
+    "tuvalu": {
+      "name": "Tuvalu",
+      "slug": "tuvalu"
+    },
+    "central-african-republic": {
+      "name": "Poblacht Na Hafraice Lair",
+      "slug": "poblacht-na-hafraice-lair"
+    },
+    "new-zealand": {
+      "name": "An Nua Shealainn",
+      "slug": "an-nua-shealainn"
+    },
+    "azerbaijan": {
+      "name": "An Asarbaiseain",
+      "slug": "an-asarbaiseain"
+    },
+    "saudi-arabia": {
+      "name": "An Araib Shadach",
+      "slug": "an-araib-shadach"
+    },
+    "mexico": {
+      "name": "Meicsiceo",
+      "slug": "meicsiceo"
+    },
+    "puerto-rico": {
+      "name": "Porto Rice",
+      "slug": "porto-rice"
+    },
+    "belarus": {
+      "name": "An Bhealaruis",
+      "slug": "an-bhealaruis"
+    },
+    "turkiye": {
+      "name": "An Tuirc",
+      "slug": "an-tuirc"
+    },
+    "congo": {
+      "name": "An Congo",
+      "slug": "an-congo"
+    },
+    "japan": {
+      "name": "An Tseapain",
+      "slug": "an-tseapain"
+    },
+    "croatia": {
+      "name": "An Chroit",
+      "slug": "an-chroit"
+    },
+    "antigua-and-barbuda": {
+      "name": "Antigua Barbuda",
+      "slug": "antigua-barbuda"
+    },
+    "qatar": {
+      "name": "Catar",
+      "slug": "catar"
+    },
+    "tunisia": {
+      "name": "An Tuineis",
+      "slug": "an-tuineis"
+    },
+    "honduras": {
+      "name": "Honduras",
+      "slug": "honduras"
+    },
+    "germany": {
+      "name": "An Ghearmain",
+      "slug": "an-ghearmain"
+    },
+    "australia": {
+      "name": "An Astrail",
+      "slug": "an-astrail"
+    },
+    "virgin-islands-uk": {
+      "name": "Oileain Bhriotanacha Na Maighdean",
+      "slug": "oileain-bhriotanacha-na-maighdean"
+    }
+  }
+}
