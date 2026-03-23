@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { getCountrySlug, getMarkerColor, formatStatus, TERRITORY_MARKERS } from './map.utils';
+import { getCountrySlug, getMarkerColor, TERRITORY_MARKERS } from './map.utils';
+import { TranslateService } from './translate.service';
 
 type LeafletModule = typeof import('leaflet');
 
@@ -10,6 +11,8 @@ export class MapService {
   private L: LeafletModule | null = null;
   private map: any = null;
   private geoJsonLayer: any = null;
+
+  constructor(private translateService: TranslateService) {}
 
   async initializeLeaflet() {
     const L = await import('leaflet');
@@ -80,22 +83,24 @@ export class MapService {
             const geoCountryName = feature?.properties?.name || '';
             const slug = getCountrySlug(geoCountryName);
             const advisory = advisoryMap.get(slug);
+            const translatedCountryName = this.translateService.translate(`countries.${slug}`);
 
             // Ireland
             if (slug === 'ireland') {
               layer.bindPopup(`
-                <strong>${geoCountryName}</strong><br>
+                <strong>${translatedCountryName}</strong><br>
                 <a href="https://www.ireland.ie" target="_blank" rel="noopener noreferrer">Visit Ireland.ie</a>
               `);
             } else if (advisory) {
               const adviceUrl = `https://www.ireland.ie/en/dfa/overseas-travel/advice/${advisory.slug}/`;
+              const translatedStatus = this.translateService.translate(`levels.${advisory.status}`);
               layer.bindPopup(`
-                <strong>${geoCountryName}</strong><br>
-                ${formatStatus(advisory.status)}<br>
+                <strong>${translatedCountryName}</strong><br>
+                ${translatedStatus}<br>
                 <a href="${adviceUrl}" target="_blank" rel="noopener noreferrer">View Official Advice</a>
               `);
             } else {
-              layer.bindPopup(`<strong>${geoCountryName}</strong><br><em>No advisory data</em>`);
+              layer.bindPopup(`<strong>${translatedCountryName}</strong><br><em>No advisory data</em>`);
             }
 
             layer.on('mouseover', (e: any) => {
@@ -125,6 +130,8 @@ export class MapService {
 
       const color = getMarkerColor(advisory.status);
       const adviceUrl = `https://www.ireland.ie/en/dfa/overseas-travel/advice/${advisory.slug}/`;
+      const translatedStatus = this.translateService.translate(`levels.${advisory.status}`);
+      const translatedTerritoryName = this.translateService.translate(`countries.${territory.slug}`);
       
       const marker = this.L.circleMarker([territory.coords[0], territory.coords[1]], {
         radius: 8,
@@ -136,8 +143,8 @@ export class MapService {
       });
 
       marker.bindPopup(`
-        <strong>${territory.name}</strong><br>
-        ${formatStatus(advisory.status)}<br>
+        <strong>${translatedTerritoryName}</strong><br>
+        ${translatedStatus}<br>
         <a href="${adviceUrl}" target="_blank" rel="noopener noreferrer">View Official Advice</a>
       `);
       marker.addTo(this.map);

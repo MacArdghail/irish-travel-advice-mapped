@@ -1,0 +1,37 @@
+name: Update Travel Advice Data
+
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: |
+          pip install playwright
+          playwright install chromium
+          playwright install-deps
+
+      - run: |
+          python travel_updates.py > frontend/public/country_status.json
+
+      - run: |
+          echo "{\"lastUpdated\": \"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\"}" > frontend/public/metadata.json
+
+      - run: |
+          git add .
+          git diff --cached --quiet || (
+            git config user.name "github-actions[bot]" &&
+            git config user.email "github-actions[bot]@users.noreply.github.com" &&
+            git commit -m "Update travel advisories" &&
+            git push
+          )
