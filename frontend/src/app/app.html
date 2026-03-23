@@ -3,15 +3,44 @@
   <button (click)="openDFAWebsite()">Visit Official DFA Advice</button>
 </header>
 
+<div class="map-container">
+  <div #map class="map"></div>
+  
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-color normal-precautions"></div>
+      <span class="legend-label">NORMAL PRECAUTIONS</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color high-degree-of-caution"></div>
+      <span class="legend-label">HIGH DEGREE OF CAUTION</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color avoid-non-essential-travel"></div>
+      <span class="legend-label">AVOID NON-ESSENTIAL TRAVEL</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color do-not-travel"></div>
+      <span class="legend-label">DO NOT TRAVEL</span>
+    </div>
+  </div>
+
+  @if (lastUpdated) {
+    <div class="last-updated">
+      <svg class="clock-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <polyline points="12 6 12 12 16 14"></polyline>
+      </svg>
+      <span>LAST UPDATED: {{ lastUpdated }}</span>
+    </div>
+  }
+</div>
+
 @for (country of countries; track country.slug; let i = $index) {
   <div class="country-item" [attr.data-status]="country.status">
     <span class="country-name"> {{i + 1}}: {{ 'countries.' + country.slug | translate }}</span>
     <span class="country-status"> {{ 'levels.' + country.status | translate }}</span>
   </div>
-}
-
-@if (lastUpdated) {
-  <p>Last updated: {{ lastUpdated }}</p>
 }
 
 <footer class="footer">

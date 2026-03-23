@@ -130,3 +130,92 @@ button {
     text-decoration: underline;
   }
 }
+
+.map-container {
+  padding: 6rem;
+}
+
+.map {
+  width: 100%;
+  height: 50rem;
+
+  @media (max-width: 768px) {
+    height: 40rem;
+  }
+}
+
+.legend {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+  }
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f5f3f5;
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+.legend-color {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+
+  &.normal-precautions {
+    background-color: #00ba42;
+  }
+
+  &.high-degree-of-caution {
+    background-color: #ffc300;
+  }
+
+  &.avoid-non-essential-travel {
+    background-color: #f07400;
+  }
+
+  &.do-not-travel {
+    background-color: #f00000;
+  }
+}
+
+.legend-label {
+  font-size: 1.2rem;
+  font-family: 'Public Sans', sans-serif;
+  color: #1B2B44;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+.last-updated {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin-top: 2rem;
+  color: #666;
+  font-size: 1.2rem;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 600;
+  text-align: right;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+.clock-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #666;
+}
