@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, PLATFORM_ID, Inject } from '@angular/core';
+import { Component, ElementRef, ViewChild, PLATFORM_ID, Inject, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -13,6 +13,7 @@ interface CountryData {
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, CommonModule, TranslatePipe],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -45,7 +46,7 @@ export class App {
           slug,
           status
         })
-      );
+      ).sort((a, b) => a.slug.localeCompare(b.slug));
       
       // Add advisories to map if it's already initialized
       if (this.mapContainer) {

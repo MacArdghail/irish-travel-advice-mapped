@@ -5,23 +5,22 @@
 
 <div class="map-container">
   <div #map class="map"></div>
-  
   <div class="legend">
     <div class="legend-item">
       <div class="legend-color normal-precautions"></div>
-      <span class="legend-label">NORMAL PRECAUTIONS</span>
+      <span class="legend-label">{{ 'levels.normal-precautions' | translate | uppercase }}</span>
     </div>
     <div class="legend-item">
       <div class="legend-color high-degree-of-caution"></div>
-      <span class="legend-label">HIGH DEGREE OF CAUTION</span>
+      <span class="legend-label">{{ 'levels.high-degree-of-caution' | translate | uppercase }}</span>
     </div>
     <div class="legend-item">
       <div class="legend-color avoid-non-essential-travel"></div>
-      <span class="legend-label">AVOID NON-ESSENTIAL TRAVEL</span>
+      <span class="legend-label">{{ 'levels.avoid-non-essential-travel' | translate | uppercase }}</span>
     </div>
     <div class="legend-item">
       <div class="legend-color do-not-travel"></div>
-      <span class="legend-label">DO NOT TRAVEL</span>
+      <span class="legend-label">{{ 'levels.do-not-travel' | translate | uppercase }}</span>
     </div>
   </div>
 
@@ -36,12 +35,36 @@
   }
 </div>
 
+<div class="countries-section">
+  <h2 class="countries-title">All Travel Advisories</h2>
+  <p class="countries-count">Showing {{ countries.length }} destinations</p>
+  <div class="countries-grid">
 @for (country of countries; track country.slug; let i = $index) {
-  <div class="country-item" [attr.data-status]="country.status">
-    <span class="country-name"> {{i + 1}}: {{ 'countries.' + country.slug | translate }}</span>
-    <span class="country-status"> {{ 'levels.' + country.status | translate }}</span>
-  </div>
+  <a href="https://www.ireland.ie/en/dfa/overseas-travel/advice/{{ country.slug }}/" target="_blank" rel="noopener noreferrer" class="country-item" [attr.data-status]="country.status">
+    <div class="country-status-row">
+      @if (country.status === "normal-precautions") {
+        <ion-icon name="checkmark-circle" class="status-icon" style="color: #10b981;"></ion-icon>
+      } @else if (country.status === "high-degree-of-caution"){
+        <ion-icon name="alert-circle" class="status-icon" style="color: #f59e0b;"></ion-icon>
+      } @else if(country.status === "avoid-non-essential-travel"){
+        <ion-icon name="warning" class="status-icon" style="color: #f97316;"></ion-icon>
+      } @else if(country.status === "do-not-travel") {
+        <svg xmlns="http://www.w3.org/2000/svg" class="status-icon" fill="#dc2626" viewBox="0 0 18 18">
+          <path d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+        </svg>
+      }
+      <span class="country-status-text" [attr.data-status]="country.status">{{ 'levels.' + country.status | translate }}</span>
+    </div>
+    <span class="country-name">{{ 'countries.' + country.slug | translate }}</span>
+    <div class="country-link-arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M5 5 L15 5 L15 15 Z"/>
+      </svg>
+    </div>
+  </a>
 }
+  </div>
+</div>
 
 <footer class="footer">
   <div class="footer-content">
