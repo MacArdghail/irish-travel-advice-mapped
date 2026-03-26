@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://traveladvicemap-569d.vercel.app/sitemap.xml
+Sitemap: https://travelmap.ie/sitemap.xml
