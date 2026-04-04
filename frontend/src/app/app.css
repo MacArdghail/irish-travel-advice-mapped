@@ -84,9 +84,21 @@
     background-color: #111827;
   }
 
+  .dfa-short {
+    display: none;
+  }
+
   @media (max-width: 768px) {
     padding: 0.8rem 1.6rem;
     font-size: 1.2rem;
+
+    .dfa-full {
+      display: none;
+    }
+
+    .dfa-short {
+      display: inline;
+    }
   }
 }
 

@@ -4,7 +4,10 @@
     <button class="language-toggle" (click)="switchLanguage(currentLang === 'en' ? 'ga' : 'en')">
       {{ currentLang === 'en' ? 'Gaeilge' : 'English' }}
     </button>
-    <button class="visit-dfa" (click)="openDFAWebsite()">{{ 'ui.visit-dfa' | translate }}</button>
+    <button class="visit-dfa" (click)="openDFAWebsite()">
+      <span class="dfa-full">{{ 'ui.visit-dfa' | translate }}</span>
+      <span class="dfa-short">{{ 'ui.visit-dfa-short' | translate }}</span>
+    </button>
   </div>
 </header>
 
