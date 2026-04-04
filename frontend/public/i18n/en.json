@@ -25,7 +25,10 @@
     "disclaimer-link-text": "www.ireland.ie",
     "before-travel": "before making travel decisions.",
     "copyright": "© 2026 Irish Travel Advice Mapped. Not an official government website.",
-    "made-with": "Made with ❤️ from 🇮🇪 by"
+    "made-with": "Made with ❤️ from 🇮🇪 by",
+    "view-official-advice": "View Official Advice",
+    "visit-ireland": "Visit Ireland.ie",
+    "no-advisory-data": "No advisory data"
   },
   "continents": {
     "Africa": "Africa",
@@ -264,6 +267,8 @@
     "southern-patagonian-ice-field": "Southern Patagonian Ice Field",
     "bir-tawil": "Bir Tawil",
     "antarctica": "Antarctica",
+    "falkland-islands": "Falkland Islands",
+    "south-georgia-and-the-islands": "South Georgia and the South Sandwich Islands",
     "new-caledonia": "New Caledonia",
     "curaao": "Curaçao",
     "aruba": "Aruba",
@@ -281,6 +286,16 @@
     "ashmore-and-cartier-islands": "Ashmore and Cartier Islands",
     "bajo-nuevo-bank-petrel-is": "Bajo Nuevo Bank (Petrel Is.)",
     "serranilla-bank": "Serranilla Bank",
-    "scarborough-reef": "Scarborough Reef"
+    "scarborough-reef": "Scarborough Reef",
+    "dhekelia-sovereign-base-area": "Dhekelia Sovereign Base Area",
+    "gibraltar": "Gibraltar",
+    "akrotiri-sovereign-base-area": "Akrotiri Sovereign Base Area",
+    "pitcairn-islands": "Pitcairn Islands",
+    "united-states-minor-outlying-islands": "United States Minor Outlying Islands",
+    "saint-helena": "Saint Helena",
+    "british-indian-ocean-territory": "British Indian Ocean Territory",
+    "american-samoa": "American Samoa",
+    "guam": "Guam",
+    "northern-mariana-islands": "Northern Mariana Islands"
   }
 }

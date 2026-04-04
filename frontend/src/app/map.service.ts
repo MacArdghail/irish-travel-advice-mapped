@@ -91,20 +91,23 @@ export class MapService {
 
             // Ireland
             if (slug === 'ireland') {
+              const visitIrelandText = this.translateService.translate('ui.visit-ireland');
               layer.bindPopup(`
                 <strong>${translatedCountryName}</strong><br>
-                <a href="https://www.ireland.ie" target="_blank" rel="noopener noreferrer">Visit Ireland.ie</a>
+                <a href="https://www.ireland.ie" target="_blank" rel="noopener noreferrer">${visitIrelandText}</a>
               `);
             } else if (advisory) {
               const adviceUrl = this.getDFAUrl(slug);
               const translatedStatus = this.translateService.translate(`levels.${advisory.status}`);
+              const viewAdviceText = this.translateService.translate('ui.view-official-advice');
               layer.bindPopup(`
                 <strong>${translatedCountryName}</strong><br>
                 ${translatedStatus}<br>
-                <a href="${adviceUrl}" target="_blank" rel="noopener noreferrer">View Official Advice</a>
+                <a href="${adviceUrl}" target="_blank" rel="noopener noreferrer">${viewAdviceText}</a>
               `);
             } else {
-              layer.bindPopup(`<strong>${translatedCountryName}</strong><br><em>No advisory data</em>`);
+              const noDataText = this.translateService.translate('ui.no-advisory-data');
+              layer.bindPopup(`<strong>${translatedCountryName}</strong><br><em>${noDataText}</em>`);
             }
 
             layer.on('mouseover', (e: any) => {
@@ -136,6 +139,7 @@ export class MapService {
       const adviceUrl = this.getDFAUrl(territory.slug);
       const translatedStatus = this.translateService.translate(`levels.${advisory.status}`);
       const translatedTerritoryName = this.translateService.translate(`countries.${territory.slug}`);
+      const viewAdviceText = this.translateService.translate('ui.view-official-advice');
       
       const marker = this.L.circleMarker([territory.coords[0], territory.coords[1]], {
         radius: 8,
@@ -149,7 +153,7 @@ export class MapService {
       marker.bindPopup(`
         <strong>${translatedTerritoryName}</strong><br>
         ${translatedStatus}<br>
-        <a href="${adviceUrl}" target="_blank" rel="noopener noreferrer">View Official Advice</a>
+        <a href="${adviceUrl}" target="_blank" rel="noopener noreferrer">${viewAdviceText}</a>
       `);
       marker.addTo(this.map);
     });

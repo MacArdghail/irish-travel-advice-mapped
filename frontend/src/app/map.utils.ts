@@ -30,22 +30,9 @@ const COUNTRY_NAME_MAP: { [key: string]: string } = {
   'British Virgin Islands': 'virgin-islands-uk',
   'Northern Cyprus': 'cyprus',
   // British territories
-  'Falkland Islands': 'great-britain',
   'Jersey': 'great-britain',
   'Guernsey': 'great-britain',
   'Isle of Man': 'great-britain',
-  'Gibraltar': 'great-britain',
-  'Saint Helena': 'great-britain',
-  'Pitcairn Islands': 'great-britain',
-  'South Georgia and the Islands': 'great-britain',
-  'British Indian Ocean Territory': 'great-britain',
-  'Dhekelia Sovereign Base Area': 'great-britain',
-  'Akrotiri Sovereign Base Area': 'great-britain',
-  // US territories
-  'United States Minor Outlying Islands': 'united-states-of-america',
-  'American Samoa': 'united-states-of-america',
-  'Guam': 'united-states-of-america',
-  'Northern Mariana Islands': 'united-states-of-america',
   // Finnish territory
   'Aland': 'finland'
 };

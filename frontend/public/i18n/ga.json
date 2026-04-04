@@ -25,7 +25,10 @@
     "disclaimer-link-text": "www.ireland.ie",
     "before-travel": "sula dtéann tú ar thuras.",
     "copyright": "© 2026 Comhairle Taistil na hÉireann ar Léarscáil. Ní suíomh gréasáin oifigiúil rialtais é.",
-    "made-with": "Déanta le ❤️ ó 🇮🇪 ag"
+    "made-with": "Déanta le ❤️ ó 🇮🇪 ag",
+    "view-official-advice": "Féach ar Chomhairle Oifigiúil",
+    "visit-ireland": "Tabhair cuairt ar Ireland.ie",
+    "no-advisory-data": "Gan sonraí comhairle"
   },
   "continents": {
     "Africa": "An Afraic",
@@ -880,6 +883,61 @@
     "virgin-islands-uk": {
       "name": "Oileain Bhriotanacha Na Maighdean",
       "slug": "oileain-bhriotanacha-na-maighdean"
-    }
+    },
+    "palestine": {
+      "name": "An Phalaistín",
+      "slug": "iosrael-agus-na-criocha-faoi-fhorghabhail"
+    },
+    "ireland": {
+      "name": "Éire"
+    },
+    "falkland-islands": {
+      "name": "Oileáin Fháclainne"
+    },
+    "south-georgia-and-the-islands": {
+      "name": "An tSeoirsia Theas agus Oileáin Sandwich Theas"
+    },
+    "dhekelia-sovereign-base-area": "Limistéar Ceannasach Dhekelia",
+    "gibraltar": "Giobráltar",
+    "akrotiri-sovereign-base-area": "Limistéar Ceannasach Akrotiri",
+    "pitcairn-islands": "Oileáin Pitcairn",
+    "united-states-minor-outlying-islands": "Mion-Oileáin Imeallacha SAM",
+    "saint-helena": "San Héilin",
+    "british-indian-ocean-territory": "Críoch Aigéan Indiach na Breataine",
+    "american-samoa": "Samó Mheiriceá",
+    "guam": "Guam",
+    "northern-mariana-islands": "Oileáin Mariana Thuaidh",
+    "somaliland": "Somaliland",
+    "western-sahara": "An Sahára Thiar",
+    "saint-martin": "Saint-Martin",
+    "sint-maarten": "Sint Maarten",
+    "san-marino": "San Mairíne",
+    "us-naval-base-guantanamo-bay": "Bunáit Chabhlaigh SAM Bá Guantánamo",
+    "brazilian-island": "Oileán na Brasaíle",
+    "holy-see": "An Vatacáin",
+    "cyprus-no-mans-area": "Limistéar Neamhfhir na Cipire",
+    "siachen-glacier": "Oighearchlár Siachen",
+    "baykonur-cosmodrome": "Cosmodrome Baykonur",
+    "southern-patagonian-ice-field": "Réimse Oighir Patagóine Theas",
+    "bir-tawil": "Bir Tawil",
+    "antarctica": "An Antartaice",
+    "new-caledonia": "An Nua-Chaladóin",
+    "curaao": "Curaçao",
+    "aruba": "Arúba",
+    "saint-pierre-and-miquelon": "Saint-Pierre agus Miquelon",
+    "french-polynesia": "Polainéis na Fraince",
+    "french-southern-and-antarctic-lands": "Críocha Francacha Theas agus Antartacha",
+    "saint-barthelemy": "Saint-Barthélemy",
+    "heard-island-and-mcdonald-islands": "Oileán Heard agus Oileáin McDonald",
+    "indian-ocean-territories": "Críocha an Aigéin Indiagh",
+    "norfolk-island": "Oileán Norfolk",
+    "wallis-and-futuna": "Vailís agus Futúna",
+    "coral-sea-islands": "Oileáin Mhuir Choiréil",
+    "spratly-islands": "Oileáin Spratly",
+    "clipperton-island": "Oileán Clipperton",
+    "ashmore-and-cartier-islands": "Oileáin Ashmore agus Cartier",
+    "bajo-nuevo-bank-petrel-is": "Bruach Bajo Nuevo",
+    "serranilla-bank": "Bruach Serranilla",
+    "scarborough-reef": "Sceirbh Scarborough"
   }
 }
