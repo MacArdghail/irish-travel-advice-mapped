@@ -37,16 +37,6 @@ const COUNTRY_NAME_MAP: { [key: string]: string } = {
   'Aland': 'finland'
 };
 
-// Territory markers for small territories with separate advisories
-export const TERRITORY_MARKERS = [
-  // French territories
-  { name: 'Guadeloupe', slug: 'guadeloupe', coords: [16.25, -61.55] },
-  { name: 'French Guiana', slug: 'french-guiana', coords: [4.0, -53.0] },
-  { name: 'Martinique', slug: 'martinique', coords: [14.64, -61.0] },
-  { name: 'Réunion', slug: 'reunion', coords: [-21.1, 55.5] },
-  { name: 'Mayotte', slug: 'mayotte', coords: [-12.8, 45.2] },
-];
-
 export function getCountrySlug(countryName: string): string {
   // Check if we have a manual mapping
   if (COUNTRY_NAME_MAP[countryName]) {
@@ -72,10 +62,4 @@ export function getMarkerColor(status: string): string {
     default:
       return '#cccccc';
   }
-}
-
-export function formatStatus(status: string): string {
-  return status.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
 }
