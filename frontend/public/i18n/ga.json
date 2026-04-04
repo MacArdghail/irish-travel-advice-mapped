@@ -1,25 +1,25 @@
 {
   "levels": {
-    "normal-precautions": "Gnáth-Réamhchúraimí",
+    "normal-precautions": "Gnáth-réamhchúraimí",
     "high-degree-of-caution": "Bí an-chúramach",
     "avoid-non-essential-travel": "Seachain Taisteal Neamhriachtanach",
     "do-not-travel": "Ná Taistil"
   },
   "ui": {
     "search-placeholder": "Cuardaigh tír...",
-    "all-levels": "Gach Leibhéil",
-    "group-by-continent": "Grúpáil de réir Ilchríoch",
+    "all-levels": "Gach Leibhéal",
+    "group-by-continent": "Grúpáil de réir Ilchríche",
     "all-travel-advisories": "Gach Comhairle Taistil",
     "showing": "Ag taispeáint",
     "of": "as",
-    "destinations": "ceann scríbeanna",
-    "last-updated": "Nuashonraithe deireanach",
+    "destinations": "ceann scríbe",
+    "last-updated": "Nuashonraithe go deireanach",
     "no-destinations-found": "Níor aimsíodh aon cheann scríbe",
     "try-adjusting": "Bain triail as do chuardach nó do scagairí a choigeartú",
     "site-title": "Comhairle Taistil na hÉireann ar Léarscáil",
-    "visit-dfa": "Tabhair cuairt ar DFA oifigiúil",
-    "visit-dfa-short": "DFA oifigiúil",
-    "footer-description": "Comhairlí taistil oifigiúla na hÉireann á léiriú ar léarscáil idirghníomhach. Sonraí bailithe go díreach ó Roinn Gnóthaí Eachtracha.",
+    "visit-dfa": "Tabhair cuairt ar an DFA oifigiúil",
+    "visit-dfa-short": "DFA",
+    "footer-description": "Comhairlí taistil oifigiúla na hÉireann á léiriú ar léarscáil idirghníomhach. Sonraí bailithe go díreach ón Roinn Gnóthaí Eachtracha.",
     "github": "GitHub",
     "disclaimer-title": "Séanadh:",
     "disclaimer-text": "Is suíomh gréasáin neamhspleách é seo agus níl sé bainteach le Roinn Gnóthaí Eachtracha na hÉireann. Déantar sonraí comhairle taistil go léir a bhailiú ó fhoinsí oifigiúla an DFA agus a thaispeáint ar léarscáil le haghaidh amhairc níos éasca. Fíoraigh comhairle taistil reatha i gcónaí go díreach ag",
@@ -27,7 +27,7 @@
     "before-travel": "sula dtéann tú ar thuras.",
     "copyright": "© 2026 Comhairle Taistil na hÉireann ar Léarscáil. Ní suíomh gréasáin oifigiúil rialtais é.",
     "made-with": "Déanta le ❤️ ó 🇮🇪 ag",
-    "view-official-advice": "Féach ar Chomhairle Oifigiúil",
+    "view-official-advice": "Féach ar an gComhairle Oifigiúil",
     "visit-ireland": "Tabhair cuairt ar Ireland.ie",
     "no-advisory-data": "Gan sonraí comhairle"
   },
@@ -42,7 +42,7 @@
   },
   "countries": {
     "marshall-islands": {
-      "name": "Na Hoileain Marshall",
+      "name": "Na hOileáin Marshall",
       "slug": "na-hoileain-marshall"
     },
     "oman": {
@@ -50,11 +50,11 @@
       "slug": "oman"
     },
     "liechtenstein": {
-      "name": "Lichtinstein",
+      "name": "Lichtinstéin",
       "slug": "lichtinstein"
     },
     "eritrea": {
-      "name": "An Eiritre",
+      "name": "An Eiritré",
       "slug": "an-eiritre"
     },
     "ecuador": {
@@ -66,7 +66,7 @@
       "slug": "lucsamburg"
     },
     "afghanistan": {
-      "name": "An Afganastain",
+      "name": "An Afganastáin",
       "slug": "an-afganastain"
     },
     "slovenia": {
@@ -74,11 +74,11 @@
       "slug": "an-tsloivein"
     },
     "lithuania": {
-      "name": "An Liotuain",
+      "name": "An Liotuáin",
       "slug": "an-liotuain"
     },
     "turkmenistan": {
-      "name": "An Tuircmeanastain",
+      "name": "An Tuircméanastáin",
       "slug": "an-tuircmeanastain"
     },
     "seychelles": {
@@ -126,7 +126,7 @@
       "slug": "siarra-leon"
     },
     "mauritius": {
-      "name": "Oilean Mhuiris",
+      "name": "Oileán Mhuirís",
       "slug": "oilean-mhuiris"
     },
     "madagascar": {
@@ -154,7 +154,7 @@
       "slug": "an-airgintin"
     },
     "ukraine": {
-      "name": "An Ucrain",
+      "name": "An Úcráin",
       "slug": "an-ucrain"
     },
     "canada": {
@@ -182,11 +182,11 @@
       "slug": "an-mholdoiv"
     },
     "trinidad-and-tobago": {
-      "name": "Oilean Na Trionoide Tobaga",
+      "name": "Oileán na Tríonóide agus Tobága",
       "slug": "oilean-na-trionoide-tobaga"
     },
     "philippines": {
-      "name": "Na Hoileain Fhilipineacha",
+      "name": "Na hOileáin Fhilipíneacha",
       "slug": "na-hoileain-fhilipineacha"
     },
     "benin": {
@@ -206,7 +206,7 @@
       "slug": "niger"
     },
     "republic-of-north-macedonia": {
-      "name": "Poblacht Na Macadoine",
+      "name": "Poblacht na Macadóine Thuaidh",
       "slug": "poblacht-na-macadoine"
     },
     "burkina-faso": {
@@ -222,7 +222,7 @@
       "slug": "an-phacastain"
     },
     "cayman-islands": {
-      "name": "Oileain Cayman",
+      "name": "Oileáin Cayman",
       "slug": "oileain-cayman"
     },
     "samoa": {
@@ -290,7 +290,7 @@
       "slug": "an-phoblacht-dhoiminiceach"
     },
     "vietnam": {
-      "name": "Vitneam",
+      "name": "Vítneam",
       "slug": "vitneam"
     },
     "democratic-republic-of-congo": {
@@ -350,7 +350,7 @@
       "slug": "veiniseala"
     },
     "ethiopia": {
-      "name": "An Aetoip",
+      "name": "An Aetóip",
       "slug": "an-aetoip"
     },
     "albania": {
@@ -366,7 +366,7 @@
       "slug": "vanuatu"
     },
     "egypt": {
-      "name": "An Eigipt",
+      "name": "An Éigipt",
       "slug": "an-eigipt"
     },
     "botswana": {
@@ -390,7 +390,7 @@
       "slug": "barbados"
     },
     "iran": {
-      "name": "An Iarain",
+      "name": "An Iaráin",
       "slug": "an-iarain"
     },
     "mayotte": {
@@ -406,7 +406,7 @@
       "slug": "iamaice"
     },
     "comoros": {
-      "name": "Oileain Chomora",
+      "name": "Oileáin Chomóra",
       "slug": "oileain-chomora"
     },
     "fiji": {
@@ -426,11 +426,11 @@
       "slug": "an-nigeir"
     },
     "taiwan": {
-      "name": "Teavain",
+      "name": "An Téaváin",
       "slug": "teavain"
     },
     "china-hong-kong-macao": {
-      "name": "An Tsin Hong Cong Macao",
+      "name": "An tSín, Hong Cong agus Macao",
       "slug": "an-tsin-hong-cong-macao"
     },
     "guyana": {
@@ -470,7 +470,7 @@
       "slug": "montaineagro"
     },
     "saint-tome-sao-tome-and-principe": {
-      "name": "Sao Tome Agus Principe",
+      "name": "São Tomé agus Príncipe",
       "slug": "sao-tome-agus-principe"
     },
     "guatemala": {
@@ -534,7 +534,7 @@
       "slug": "an-tealainn"
     },
     "sweden": {
-      "name": "An Tsualainn",
+      "name": "An tSualainn",
       "slug": "an-tsualainn"
     },
     "lebanon": {
@@ -562,11 +562,11 @@
       "slug": "an-indineis"
     },
     "russian-federation": {
-      "name": "Conaidhm Na Ruise",
+      "name": "Cónaidhm na Rúise",
       "slug": "conaidhm-na-ruise"
     },
     "united-arab-emirates": {
-      "name": "Aontas Na Neimiriochtai Arabacha",
+      "name": "Aontas na nÉimíríochtaí Arabacha",
       "slug": "aontas-na-neimiriochtai-arabacha"
     },
     "libya": {
@@ -578,7 +578,7 @@
       "slug": "na-bahamai"
     },
     "great-britain": {
-      "name": "An Bhreatain Mhor",
+      "name": "An Bhreatain Mhór",
       "slug": "an-bhreatain-mhor"
     },
     "kyrgyzstan": {
@@ -610,7 +610,7 @@
       "slug": "an-iordain"
     },
     "saint-vincent-and-the-grenadines": {
-      "name": "San Uinseann Agus Na Greanaidini",
+      "name": "San Uinseann agus na Greanáidíní",
       "slug": "san-uinseann-agus-na-greanaidini"
     },
     "bulgaria": {
@@ -642,7 +642,7 @@
       "slug": "an-tseirbia"
     },
     "cook-islands": {
-      "name": "Na Hoileain Cook",
+      "name": "Na hOileáin Cook",
       "slug": "na-hoileain-cook"
     },
     "belgium": {
@@ -670,7 +670,7 @@
       "slug": "an-fhionlainn"
     },
     "czech-republic": {
-      "name": "Poblacht Na Seice",
+      "name": "Poblacht na Seice",
       "slug": "poblacht-na-seice"
     },
     "norway": {
@@ -698,11 +698,11 @@
       "slug": "andora"
     },
     "faroe-islands": {
-      "name": "Oileain Fharo",
+      "name": "Oileáin Fharó",
       "slug": "oileain-fharo"
     },
     "china": {
-      "name": "An Tsin",
+      "name": "An tSín",
       "slug": "an-tsin"
     },
     "lesotho": {
@@ -738,7 +738,7 @@
       "slug": "an-afraic-theas"
     },
     "switzerland": {
-      "name": "An Eilveis",
+      "name": "An Eilvéis",
       "slug": "an-eilveis"
     },
     "costa-rica": {
@@ -754,7 +754,7 @@
       "slug": "an-mhalaiv"
     },
     "maldives": {
-      "name": "Oileain Mhaildive",
+      "name": "Oileáin Mhaildíve",
       "slug": "oileain-mhaildive"
     },
     "federated-states-of-micronesia": {
@@ -762,7 +762,7 @@
       "slug": "na-stait-chonaidhme-na-micrineise"
     },
     "solomon-islands": {
-      "name": "Oileain Sholomon",
+      "name": "Oileáin Sholamón",
       "slug": "oileain-sholomon"
     },
     "guinea-bissau": {
@@ -774,7 +774,7 @@
       "slug": "laos"
     },
     "virgin-islands-us": {
-      "name": "Oileain Mhaighdean Na Stat Aontaithe",
+      "name": "Oileáin Mhaighdean Stáit Aontaithe Mheiriceá",
       "slug": "oileain-mhaighdean-na-stat-aontaithe"
     },
     "georgia": {
@@ -790,7 +790,7 @@
       "slug": "an-bheilis"
     },
     "turks-and-caicos-islands": {
-      "name": "Oileain Na Dturcach Agus Caicos",
+      "name": "Oileáin na dTurcach agus Caicos",
       "slug": "oileain-na-dturcach-agus-caicos"
     },
     "timor-leste": {
@@ -814,7 +814,7 @@
       "slug": "tuvalu"
     },
     "central-african-republic": {
-      "name": "Poblacht Na Hafraice Lair",
+      "name": "Poblacht na hAfraice Láir",
       "slug": "poblacht-na-hafraice-lair"
     },
     "new-zealand": {
@@ -822,11 +822,11 @@
       "slug": "an-nua-shealainn"
     },
     "azerbaijan": {
-      "name": "An Asarbaiseain",
+      "name": "An Asarbaiseáin",
       "slug": "an-asarbaiseain"
     },
     "saudi-arabia": {
-      "name": "An Araib Shadach",
+      "name": "An Araib Shádach",
       "slug": "an-araib-shadach"
     },
     "mexico": {
@@ -850,7 +850,7 @@
       "slug": "an-congo"
     },
     "japan": {
-      "name": "An Tseapain",
+      "name": "An tSeapáin",
       "slug": "an-tseapain"
     },
     "croatia": {
@@ -878,11 +878,11 @@
       "slug": "an-ghearmain"
     },
     "australia": {
-      "name": "An Astrail",
+      "name": "An Astráil",
       "slug": "an-astrail"
     },
     "virgin-islands-uk": {
-      "name": "Oileain Bhriotanacha Na Maighdean",
+      "name": "Oileáin Bhriotanacha na Maighdean",
       "slug": "oileain-bhriotanacha-na-maighdean"
     },
     "palestine": {
@@ -930,7 +930,7 @@
     "french-southern-and-antarctic-lands": "Críocha Francacha Theas agus Antartacha",
     "saint-barthelemy": "Saint-Barthélemy",
     "heard-island-and-mcdonald-islands": "Oileán Heard agus Oileáin McDonald",
-    "indian-ocean-territories": "Críocha an Aigéin Indiagh",
+    "indian-ocean-territories": "Críocha an Aigéin Indiaigh",
     "norfolk-island": "Oileán Norfolk",
     "wallis-and-futuna": "Vailís agus Futúna",
     "coral-sea-islands": "Oileáin Mhuir Choiréil",
