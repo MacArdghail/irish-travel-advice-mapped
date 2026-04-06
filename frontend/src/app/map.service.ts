@@ -219,7 +219,12 @@ export class MapService {
 
         layer.addTo(this.map);
         this.frenchOverlays.push(layer);
+        
+        console.log(`✅ ${slug} overlay added`);
       })
+      .catch(error => {
+        console.log(`⚠️ Could not load ${slug} overlay:`, error);
+      });
   }
 
   private getDFAUrl(countrySlug: string): string {
