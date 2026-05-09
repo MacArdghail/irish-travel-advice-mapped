@@ -93,6 +93,14 @@
   font-size: 1.5rem;
   font-family: 'Public Sans', sans-serif;
   color: #6b7280;
+  margin: 0 0 1rem 0;
+}
+
+.updates-note {
+  font-size: 1.3rem;
+  font-family: 'Public Sans', sans-serif;
+  color: #9ca3af;
+  font-style: italic;
   margin: 0 0 4rem 0;
 }
 
