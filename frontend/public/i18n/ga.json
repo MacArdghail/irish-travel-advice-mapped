@@ -29,7 +29,12 @@
     "made-with": "Déanta le ❤️ ó 🇮🇪 ag",
     "view-official-advice": "Féach ar an gComhairle Oifigiúil",
     "visit-ireland": "Tabhair cuairt ar Ireland.ie",
-    "no-advisory-data": "Gan sonraí comhairle"
+    "no-advisory-data": "Gan sonraí comhairle",
+    "updates-title": "Nuashonruithe ar Chomhairle Taistil",
+    "updates-subtitle": "Cartlann de gach athrú ar chomhairle taistil Roinn Gnóthaí Eachtracha na hÉireann.",
+    "no-updates": "Níl aon nuashonruithe taifeadta fós.",
+    "updates-link": "Nuashonruithe",
+    "map-link": "Léarscáil"
   },
   "continents": {
     "Africa": "An Afraic",

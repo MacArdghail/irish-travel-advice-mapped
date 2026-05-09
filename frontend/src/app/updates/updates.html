@@ -1,0 +1,36 @@
+<main class="updates-main">
+  <div class="updates-container">
+    <h2 class="updates-title">{{ 'ui.updates-title' | translate | uppercase }}</h2>
+    <p class="updates-subtitle">{{ 'ui.updates-subtitle' | translate }}</p>
+
+    @if (updates.length === 0) {
+      <p class="no-updates">{{ 'ui.no-updates' | translate }}</p>
+    }
+
+    @for (entry of updates; track entry.date) {
+      <div class="update-entry">
+        <div class="update-date">{{ formatDate(entry.date) }}</div>
+        <div class="update-changes">
+          @for (change of entry.changes; track change.country) {
+            <div class="change-row">
+              <a class="country-name" [href]="getDFAUrl(change.country)" target="_blank" rel="noopener noreferrer">{{ getCountryName(change.country) }}</a>
+              <div class="status-change">
+                @if (change.from) {
+                  <span class="status-badge" [class]="getStatusClass(change.from)">{{ getStatusLabel(change.from) }}</span>
+                } @else {
+                  <span class="status-badge new">NEW</span>
+                }
+                <span class="arrow">→</span>
+                @if (change.to) {
+                  <span class="status-badge" [class]="getStatusClass(change.to)">{{ getStatusLabel(change.to) }}</span>
+                } @else {
+                  <span class="status-badge removed">REMOVED</span>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</main>

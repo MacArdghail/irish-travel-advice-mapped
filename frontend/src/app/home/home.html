@@ -1,0 +1,107 @@
+<main>
+  <div class="map-container">
+    <div #map class="map"></div>
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-color normal-precautions"></div>
+        <span class="legend-label">{{ 'levels.normal-precautions' | translate | uppercase }}</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color high-degree-of-caution"></div>
+        <span class="legend-label">{{ 'levels.high-degree-of-caution' | translate | uppercase }}</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color avoid-non-essential-travel"></div>
+        <span class="legend-label">{{ 'levels.avoid-non-essential-travel' | translate | uppercase }}</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color do-not-travel"></div>
+        <span class="legend-label">{{ 'levels.do-not-travel' | translate | uppercase }}</span>
+      </div>
+    </div>
+
+    @if (lastUpdated) {
+      <div class="last-updated">
+        <svg class="clock-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span>{{ 'ui.last-updated' | translate | uppercase }}: {{ lastUpdated }}</span>
+      </div>
+    }
+  </div>
+
+  <div class="countries-section">
+    <h2 class="countries-title">{{ 'ui.all-travel-advisories' | translate }}</h2>
+    <div class="filters-container">
+      <div class="search-container">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        <input
+          type="text"
+          class="search-input"
+          [placeholder]="'ui.search-placeholder' | translate"
+          [(ngModel)]="searchQuery"
+          (input)="filterCountries()"
+        />
+      </div>
+
+      <div class="level-filter">
+        <label for="level-select" class="visually-hidden">Filter by advisory level</label>
+        <select
+          id="level-select"
+          class="level-select"
+          [(ngModel)]="selectedLevel"
+          (change)="filterCountries()"
+        >
+          <option value="all">{{ 'ui.all-levels' | translate }}</option>
+          <option value="normal-precautions">{{ 'levels.normal-precautions' | translate }}</option>
+          <option value="high-degree-of-caution">{{ 'levels.high-degree-of-caution' | translate }}</option>
+          <option value="avoid-non-essential-travel">{{ 'levels.avoid-non-essential-travel' | translate }}</option>
+          <option value="do-not-travel">{{ 'levels.do-not-travel' | translate }}</option>
+        </select>
+      </div>
+
+      <button class="group-toggle" (click)="toggleGrouping()" [class.active]="groupByContinent">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+          <path d="M2 12h20"></path>
+        </svg>
+        {{ 'ui.group-by-continent' | translate }}
+      </button>
+    </div>
+
+    <p class="countries-count">{{ 'ui.showing' | translate }} {{ filteredCountries.length }} {{ 'ui.of' | translate }} {{ countries.length }} {{ 'ui.destinations' | translate }}</p>
+
+    @if (filteredCountries.length === 0 || (groupByContinent && continents.length === 0)) {
+      <div class="no-results">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        <h3>{{ 'ui.no-destinations-found' | translate }}</h3>
+        <p>{{ 'ui.try-adjusting' | translate }}</p>
+      </div>
+    } @else if (!groupByContinent) {
+      <div class="countries-grid">
+        @for (country of filteredCountries; track country.slug) {
+          <app-country-card [country]="country" />
+        }
+      </div>
+    } @else {
+      @for (continent of continents; track continent) {
+        <div class="continent-group">
+          <h3 class="continent-title">{{ 'continents.' + continent | translate }} ({{ groupedCountries[continent].length }})</h3>
+          <div class="countries-grid">
+            @for (country of groupedCountries[continent]; track country.slug) {
+              <app-country-card [country]="country" />
+            }
+          </div>
+        </div>
+      }
+    }
+  </div>
+</main>
