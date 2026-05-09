@@ -29,7 +29,12 @@
     "made-with": "Made with ❤️ from 🇮🇪 by",
     "view-official-advice": "View Official Advice",
     "visit-ireland": "Visit Ireland.ie",
-    "no-advisory-data": "No advisory data"
+    "no-advisory-data": "No advisory data",
+    "updates-title": "Advisory Updates",
+    "updates-subtitle": "A log of all changes to Irish DFA travel advisories over time.",
+    "no-updates": "No updates recorded yet.",
+    "updates-link": "Updates",
+    "map-link": "Map"
   },
   "continents": {
     "Africa": "Africa",

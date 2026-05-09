@@ -25,6 +25,14 @@ export class MapService {
   createMap(container: HTMLElement) {
     if (!this.L) return null;
 
+    // Destroy existing map instance if it exists
+    if (this.map) {
+      this.map.remove();
+      this.map = null;
+      this.geoJsonLayer = null;
+      this.frenchOverlays = [];
+    }
+
     this.map = this.L.map(container, {
       center: [20, 0],
       zoom: 2,

@@ -21,7 +21,7 @@
   }
 
   &[data-status="high-degree-of-caution"] {
-    border-left-color: #f59e0b;
+    border-left-color: #ffc300;
   }
 
   &[data-status="avoid-non-essential-travel"] {
@@ -81,7 +81,7 @@
   }
 
   &[data-status="high-degree-of-caution"] {
-    color: #f59e0b;
+    color: #ffc300;
   }
 
   &[data-status="avoid-non-essential-travel"] {
