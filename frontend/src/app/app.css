@@ -30,11 +30,25 @@
     padding: 0 2rem;
 
     h1 {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
 
     .header-actions {
       gap: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 1.5rem;
+
+    h1 {
+      font-size: 1.3rem;
+      max-width: 12rem;
+      line-height: 1.2;
+    }
+
+    .header-actions {
+      gap: 0.8rem;
     }
   }
 }
