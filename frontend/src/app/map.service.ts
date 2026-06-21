@@ -82,6 +82,23 @@ export class MapService {
           this.toggleFullscreen(mapContainer, button);
         });
 
+        // Listen for fullscreen changes to update button state
+        const fullscreenChangeHandler = () => {
+          const doc = document as any;
+          const isFullscreen = doc.fullscreenElement || doc.webkitFullscreenElement || 
+                              doc.mozFullScreenElement || doc.msFullscreenElement;
+          
+          if (!isFullscreen && !mapContainer.classList.contains('map-fullscreen-fallback')) {
+            button.innerHTML = '⛶';
+            button.title = 'Toggle Fullscreen';
+          }
+        };
+
+        document.addEventListener('fullscreenchange', fullscreenChangeHandler);
+        document.addEventListener('webkitfullscreenchange', fullscreenChangeHandler);
+        document.addEventListener('mozfullscreenchange', fullscreenChangeHandler);
+        document.addEventListener('MSFullscreenChange', fullscreenChangeHandler);
+
         return container;
       }
     });
@@ -90,18 +107,75 @@ export class MapService {
   }
 
   private toggleFullscreen(element: HTMLElement, button: HTMLElement) {
-    if (!document.fullscreenElement) {
-      element.requestFullscreen().then(() => {
-        button.innerHTML = '⛶'; // Keep same icon or change if desired
-        button.title = 'Exit Fullscreen';
-      }).catch(err => {
-        console.error('Error attempting to enable fullscreen:', err);
-      });
+    const doc = document as any;
+    const isCurrentlyFullscreen = doc.fullscreenElement || doc.webkitFullscreenElement || 
+                                   doc.mozFullScreenElement || doc.msFullscreenElement ||
+                                   element.classList.contains('map-fullscreen-fallback');
+
+    if (!isCurrentlyFullscreen) {
+      // Try native fullscreen API with vendor prefixes
+      const requestFullscreen = element.requestFullscreen || 
+                                 (element as any).webkitRequestFullscreen || 
+                                 (element as any).mozRequestFullScreen || 
+                                 (element as any).msRequestFullscreen;
+
+      if (requestFullscreen) {
+        requestFullscreen.call(element).then(() => {
+          button.innerHTML = '✕'; // X icon to exit
+          button.title = 'Exit Fullscreen';
+        }).catch((err: Error) => {
+          console.log('Native fullscreen not supported, using fallback');
+          this.enableFallbackFullscreen(element, button);
+        });
+      } else {
+        // Fallback for browsers that don't support fullscreen API (e.g., iOS Safari)
+        this.enableFallbackFullscreen(element, button);
+      }
     } else {
-      document.exitFullscreen().then(() => {
-        button.innerHTML = '⛶';
-        button.title = 'Toggle Fullscreen';
-      });
+      // Exit fullscreen
+      if (element.classList.contains('map-fullscreen-fallback')) {
+        this.disableFallbackFullscreen(element, button);
+      } else {
+        const exitFullscreen = doc.exitFullscreen || 
+                               doc.webkitExitFullscreen || 
+                               doc.mozCancelFullScreen || 
+                               doc.msExitFullscreen;
+        
+        if (exitFullscreen) {
+          exitFullscreen.call(doc).then(() => {
+            button.innerHTML = '⛶';
+            button.title = 'Toggle Fullscreen';
+          });
+        }
+      }
+    }
+  }
+
+  private enableFallbackFullscreen(element: HTMLElement, button: HTMLElement) {
+    element.classList.add('map-fullscreen-fallback');
+    document.body.style.overflow = 'hidden';
+    button.innerHTML = '✕';
+    button.title = 'Exit Fullscreen';
+    
+    // Force map to resize to new dimensions
+    if (this.map) {
+      setTimeout(() => {
+        this.map.invalidateSize();
+      }, 100);
+    }
+  }
+
+  private disableFallbackFullscreen(element: HTMLElement, button: HTMLElement) {
+    element.classList.remove('map-fullscreen-fallback');
+    document.body.style.overflow = '';
+    button.innerHTML = '⛶';
+    button.title = 'Toggle Fullscreen';
+    
+    // Force map to resize back to normal dimensions
+    if (this.map) {
+      setTimeout(() => {
+        this.map.invalidateSize();
+      }, 100);
     }
   }
 
