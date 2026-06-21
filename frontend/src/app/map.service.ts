@@ -51,7 +51,7 @@ export class MapService {
       noWrap: true
     }).addTo(this.map);
 
-    // Add custom fullscreen control
+    // Add custom fullscreen control - pass the map div itself for fullscreen
     this.addCustomFullscreenControl(container);
 
     return this.map;
@@ -123,6 +123,10 @@ export class MapService {
         requestFullscreen.call(element).then(() => {
           button.innerHTML = '✕'; // X icon to exit
           button.title = 'Exit Fullscreen';
+          // Invalidate map size after fullscreen
+          if (this.map) {
+            setTimeout(() => this.map.invalidateSize(), 100);
+          }
         }).catch((err: Error) => {
           console.log('Native fullscreen not supported, using fallback');
           this.enableFallbackFullscreen(element, button);
@@ -145,6 +149,10 @@ export class MapService {
           exitFullscreen.call(doc).then(() => {
             button.innerHTML = '⛶';
             button.title = 'Toggle Fullscreen';
+            // Invalidate map size after exiting fullscreen
+            if (this.map) {
+              setTimeout(() => this.map.invalidateSize(), 100);
+            }
           });
         }
       }
