@@ -64,6 +64,15 @@
   }
 }
 
+/* Make Leaflet's tile pane background match */
+.map :global(.leaflet-tile-pane) {
+  background-color: #f9fafb !important;
+}
+
+.map :global(.leaflet-container) {
+  background-color: #f9fafb !important;
+}
+
 .legend {
   display: flex;
   justify-content: flex-end;

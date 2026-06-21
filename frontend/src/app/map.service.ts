@@ -45,11 +45,14 @@ export class MapService {
       worldCopyJump: false
     });
 
-    this.L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      attribution: '© OpenStreetMap contributors, © CARTO',
-      maxZoom: 18,
-      noWrap: true
-    }).addTo(this.map);
+    // Set the map pane background to match the page background
+    const mapPane = this.map.getPane('mapPane');
+    if (mapPane) {
+      mapPane.style.backgroundColor = '#f9fafb';
+    }
+
+    // Don't add a tile layer - we'll just show countries on the background color
+    // This makes the ocean match the background perfectly
 
     // Add custom fullscreen control - pass the map div itself for fullscreen
     this.addCustomFullscreenControl(container);
