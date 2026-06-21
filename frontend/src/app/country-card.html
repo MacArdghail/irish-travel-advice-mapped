@@ -7,13 +7,19 @@
 >
   <div class="country-status-row">
     @if (country.status === "normal-precautions") {
-      <ion-icon name="checkmark-circle" class="status-icon" style="color: #10b981;"></ion-icon>
+      <svg xmlns="http://www.w3.org/2000/svg" class="status-icon" fill="#10b981" viewBox="0 0 310.277 310.277">
+        <path d="M155.139,0C69.598,0,0,69.598,0,155.139c0,85.547,69.598,155.139,155.139,155.139c85.547,0,155.139-69.592,155.139-155.139C310.277,69.598,240.686,0,155.139,0z M144.177,196.567L90.571,142.96l8.437-8.437l45.169,45.169l81.34-81.34l8.437,8.437L144.177,196.567z"/>
+      </svg>
     } @else if (country.status === "high-degree-of-caution"){
-      <ion-icon name="alert-circle" class="status-icon" style="color: #ffc300;"></ion-icon>
+      <svg xmlns="http://www.w3.org/2000/svg" class="status-icon" fill="#ffc300" viewBox="0 0 24 24">
+        <path d="M12.5 2.2a10.3 10.3 0 1 0 10.3 10.3A10.299 10.299 0 0 0 12.5 2.2zM12 7h1v7h-1zm.5 10.5a1 1 0 1 1 1-1 1.002 1.002 0 0 1-1 1z"/>
+      </svg>
     } @else if(country.status === "avoid-non-essential-travel"){
-      <ion-icon name="warning" class="status-icon" style="color: #f97316;"></ion-icon>
+      <svg xmlns="http://www.w3.org/2000/svg" class="status-icon" fill="#f97316" viewBox="0 0 24 24">
+        <path d="M13.995 1.827a1.745 1.745 0 0 0-2.969 0l-9.8 17.742a1.603 1.603 0 0 0 0 1.656 1.678 1.678 0 0 0 1.48.775H22.28a1.68 1.68 0 0 0 1.484-.775 1.608 1.608 0 0 0 .003-1.656zM12 8h1v7h-1zm.5 10.5a1 1 0 1 1 1-1 1.002 1.002 0 0 1-1 1z"/>
+      </svg>
     } @else if(country.status === "do-not-travel") {
-      <svg xmlns="http://www.w3.org/2000/svg" class="status-icon" fill="#dc2626" viewBox="0 0 18 18">
+      <svg xmlns="http://www.w3.org/2000/svg" class="status-icon" fill="#dc2626" viewBox="0 0 16 16">
         <path d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
       </svg>
     }
