@@ -6,9 +6,9 @@
     } @else {
       <a class="updates-link" routerLink="/updates">{{ 'ui.updates-link' | translate }}</a>
     }
-    <button class="language-toggle" (click)="switchLanguage(currentLang === 'en' ? 'ga' : 'en')">
+    <!-- <button class="language-toggle" (click)="switchLanguage(currentLang === 'en' ? 'ga' : 'en')">
       {{ currentLang === 'en' ? 'Gaeilge' : 'English' }}
-    </button>
+    </button> -->
     <button class="visit-dfa" (click)="openDFAWebsite()">
       <span class="dfa-full">{{ 'ui.visit-dfa' | translate }}</span>
       <span class="dfa-short">{{ 'ui.visit-dfa-short' | translate }}</span>
