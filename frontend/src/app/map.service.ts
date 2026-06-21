@@ -13,6 +13,8 @@ export class MapService {
   private geoJsonLayer: any = null;
   private frenchOverlays: any[] = []; // Store French territory overlays
   private currentCountries: { slug: string; status: string }[] = [];
+  private retryCount: number = 0;
+  private readonly MAX_RETRIES: number = 2;
 
   constructor(private translateService: TranslateService) {}
 
@@ -38,7 +40,7 @@ export class MapService {
       zoom: 2,
       minZoom: 1,
       maxZoom: 10,
-      maxBounds: [[-90, -180], [90, 180]],
+      maxBounds: [[-60, -180], [90, 180]], // Exclude Antarctica (below -60 latitude)
       maxBoundsViscosity: 1.0,
       worldCopyJump: false
     });
@@ -49,7 +51,58 @@ export class MapService {
       noWrap: true
     }).addTo(this.map);
 
+    // Add custom fullscreen control
+    this.addCustomFullscreenControl(container);
+
     return this.map;
+  }
+
+  private addCustomFullscreenControl(mapContainer: HTMLElement) {
+    if (!this.L || !this.map) return;
+
+    // Create custom fullscreen control
+    const FullscreenControl = this.L.Control.extend({
+      options: {
+        position: 'topleft'
+      },
+
+      onAdd: () => {
+        const container = this.L!.DomUtil.create('div', 'leaflet-bar leaflet-control');
+        const button = this.L!.DomUtil.create('a', 'leaflet-control-fullscreen', container);
+        button.href = '#';
+        button.title = 'Toggle Fullscreen';
+        button.innerHTML = '⛶'; // Fullscreen icon
+        button.style.fontSize = '18px';
+        button.style.lineHeight = '30px';
+        button.style.textAlign = 'center';
+
+        this.L!.DomEvent.on(button, 'click', (e: Event) => {
+          e.preventDefault();
+          e.stopPropagation();
+          this.toggleFullscreen(mapContainer, button);
+        });
+
+        return container;
+      }
+    });
+
+    new FullscreenControl().addTo(this.map);
+  }
+
+  private toggleFullscreen(element: HTMLElement, button: HTMLElement) {
+    if (!document.fullscreenElement) {
+      element.requestFullscreen().then(() => {
+        button.innerHTML = '⛶'; // Keep same icon or change if desired
+        button.title = 'Exit Fullscreen';
+      }).catch(err => {
+        console.error('Error attempting to enable fullscreen:', err);
+      });
+    } else {
+      document.exitFullscreen().then(() => {
+        button.innerHTML = '⛶';
+        button.title = 'Toggle Fullscreen';
+      });
+    }
   }
 
   addCountryAdvisories(countries: { slug: string; status: string }[]) {
@@ -57,6 +110,11 @@ export class MapService {
 
     // Store countries for re-rendering on language change
     this.currentCountries = countries;
+
+    // Reset retry count when explicitly called (e.g., language change)
+    if (this.retryCount === 0 || this.geoJsonLayer) {
+      this.retryCount = 0;
+    }
 
     if (this.geoJsonLayer) {
       this.geoJsonLayer.remove();
@@ -76,7 +134,12 @@ export class MapService {
     });
 
     fetch('https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson')
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Failed to fetch GeoJSON: ${response.status}`);
+        }
+        return response.json();
+      })
       .then(data => {
         if (!this.map || !this.L) return;
 
@@ -85,9 +148,10 @@ export class MapService {
         this.geoJsonLayer = this.L.geoJSON(data, {
           filter: (feature) => {
             // Exclude France from main layer - we'll add it separately with territories
+            // Also exclude Antarctica as it has no travel advisories
             const geoCountryName = feature?.properties?.name || '';
             const slug = getCountrySlug(geoCountryName);
-            return slug !== 'france';
+            return slug !== 'france' && slug !== 'antarctica';
           },
           style: (feature) => {
             const geoCountryName = feature?.properties?.name || '';
@@ -157,6 +221,21 @@ export class MapService {
         }
 
         this.addFranceAndTerritories(advisoryMap);
+      })
+      .catch(error => {
+        console.error('Failed to load country GeoJSON data:', error);
+        // Retry with backoff if under max retries
+        if (this.retryCount < this.MAX_RETRIES) {
+          this.retryCount++;
+          const delay = this.retryCount * 1500; // Progressive delay: 1.5s, 3s
+          console.log(`Retrying GeoJSON load (attempt ${this.retryCount}/${this.MAX_RETRIES}) in ${delay}ms...`);
+          setTimeout(() => {
+            this.addCountryAdvisories(countries);
+          }, delay);
+        } else {
+          console.error('Max retries reached. Failed to load map data.');
+          this.retryCount = 0; // Reset for next time
+        }
       });
   }
 
@@ -189,7 +268,12 @@ export class MapService {
     const color = getMarkerColor(advisory.status);
 
     fetch(geojsonUrl)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        return response.json();
+      })
       .then(data => {
         if (!this.map || !this.L) return;
 
@@ -228,10 +312,10 @@ export class MapService {
         layer.addTo(this.map);
         this.frenchOverlays.push(layer);
         
-        console.log(`✅ ${slug} overlay added`);
+        console.log(`${slug} overlay added`);
       })
       .catch(error => {
-        console.log(`⚠️ Could not load ${slug} overlay:`, error);
+        console.log(`Could not load ${slug} overlay:`, error);
       });
   }
 

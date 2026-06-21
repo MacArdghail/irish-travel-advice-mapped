@@ -53,6 +53,8 @@ export class HomeComponent {
     });
   }
 
+  private mapInitialized = false;
+
   ngOnInit() {
     this.travelDataService.getMetadata().subscribe((metadata) => {
       this.lastUpdatedDate = new Date(metadata.lastUpdated);
@@ -63,7 +65,8 @@ export class HomeComponent {
     this.travelDataService.getCountries().subscribe((countries) => {
       this.countries = countries;
       this.filteredCountries = [...this.countries];
-      if (this.mapContainer) {
+      // If map is already initialized, add the advisories
+      if (this.mapInitialized && this.countries.length > 0) {
         this.mapService.addCountryAdvisories(this.countries);
       }
       this.cdr.markForCheck();
@@ -74,6 +77,8 @@ export class HomeComponent {
     if (isPlatformBrowser(this.platformId)) {
       await this.mapService.initializeLeaflet();
       this.mapService.createMap(this.mapContainer.nativeElement);
+      this.mapInitialized = true;
+      // Only add advisories if countries have already loaded
       if (this.countries.length > 0) {
         this.mapService.addCountryAdvisories(this.countries);
       }
