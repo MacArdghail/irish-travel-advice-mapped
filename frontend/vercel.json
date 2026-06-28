@@ -3,6 +3,13 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist/frontend/browser",
   "installCommand": "npm install",
+  "redirects": [
+    {
+      "source": "https://www.travelmap.ie/:path*",
+      "destination": "https://travelmap.ie/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
