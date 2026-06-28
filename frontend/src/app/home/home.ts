@@ -2,6 +2,7 @@ import { Component, ElementRef, ViewChild, PLATFORM_ID, Inject, CUSTOM_ELEMENTS_
 import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { TranslatePipe } from '../translate.pipe';
 import { TranslateService } from '../translate.service';
 import { MapService } from '../map.service';
@@ -35,7 +36,8 @@ export class HomeComponent {
     private mapService: MapService,
     private translateService: TranslateService,
     private travelDataService: TravelDataService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private route: ActivatedRoute
   ) {
     if (isPlatformBrowser(this.platformId)) {
       import('@vercel/analytics').then(({ inject }) => inject());
@@ -56,6 +58,13 @@ export class HomeComponent {
   private mapInitialized = false;
 
   ngOnInit() {
+    // Check if route has a filter parameter
+    this.route.data.subscribe(data => {
+      if (data['filter']) {
+        this.selectedLevel = data['filter'];
+      }
+    });
+
     this.travelDataService.getMetadata().subscribe((metadata) => {
       this.lastUpdatedDate = new Date(metadata.lastUpdated);
       this.updateLastUpdatedText();
@@ -64,7 +73,7 @@ export class HomeComponent {
 
     this.travelDataService.getCountries().subscribe((countries) => {
       this.countries = countries;
-      this.filteredCountries = [...this.countries];
+      this.filterCountries(); // Apply filter on initial load
       // If map is already initialized, add the advisories
       if (this.mapInitialized && this.countries.length > 0) {
         this.mapService.addCountryAdvisories(this.countries);
