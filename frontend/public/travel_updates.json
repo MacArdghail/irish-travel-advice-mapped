@@ -1,50 +1,5 @@
 [
   {
-    "date": "2026-07-08",
-    "changes": [
-      {
-        "country": "republic-of-north-macedonia",
-        "from": "normal-precautions",
-        "to": null
-      },
-      {
-        "country": "norway",
-        "from": "normal-precautions",
-        "to": null
-      },
-      {
-        "country": "oman",
-        "from": "high-degree-of-caution",
-        "to": null
-      },
-      {
-        "country": "pakistan",
-        "from": "high-degree-of-caution",
-        "to": null
-      },
-      {
-        "country": "palau",
-        "from": "normal-precautions",
-        "to": null
-      },
-      {
-        "country": "palestine",
-        "from": "do-not-travel",
-        "to": null
-      },
-      {
-        "country": "panama",
-        "from": "high-degree-of-caution",
-        "to": null
-      },
-      {
-        "country": "papua-new-guinea",
-        "from": "high-degree-of-caution",
-        "to": null
-      }
-    ]
-  },
-  {
     "date": "2026-04-24",
     "changes": [
       {
