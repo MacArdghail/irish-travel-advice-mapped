@@ -1,5 +1,65 @@
 [
   {
+    "date": "2026-07-11",
+    "changes": [
+      {
+        "country": "saint-lucia",
+        "from": "normal-precautions",
+        "to": null
+      },
+      {
+        "country": "saint-tome-sao-tome-and-principe",
+        "from": "high-degree-of-caution",
+        "to": null
+      },
+      {
+        "country": "saint-vincent-and-the-grenadines",
+        "from": "normal-precautions",
+        "to": null
+      },
+      {
+        "country": "samoa",
+        "from": "normal-precautions",
+        "to": null
+      },
+      {
+        "country": "saudi-arabia",
+        "from": "avoid-non-essential-travel",
+        "to": null
+      },
+      {
+        "country": "senegal",
+        "from": "high-degree-of-caution",
+        "to": null
+      },
+      {
+        "country": "serbia",
+        "from": "normal-precautions",
+        "to": null
+      },
+      {
+        "country": "seychelles",
+        "from": "normal-precautions",
+        "to": null
+      },
+      {
+        "country": "sierra-leone",
+        "from": "high-degree-of-caution",
+        "to": null
+      },
+      {
+        "country": "singapore",
+        "from": "normal-precautions",
+        "to": null
+      },
+      {
+        "country": "slovak-republic-slovakia",
+        "from": "normal-precautions",
+        "to": null
+      }
+    ]
+  },
+  {
     "date": "2026-04-24",
     "changes": [
       {
