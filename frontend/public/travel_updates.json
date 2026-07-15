@@ -1,5 +1,60 @@
 [
   {
+    "date": "2026-07-15",
+    "changes": [
+      {
+        "country": "philippines",
+        "from": null,
+        "to": "high-degree-of-caution"
+      },
+      {
+        "country": "poland",
+        "from": null,
+        "to": "normal-precautions"
+      },
+      {
+        "country": "puerto-rico",
+        "from": null,
+        "to": "normal-precautions"
+      },
+      {
+        "country": "qatar",
+        "from": null,
+        "to": "avoid-non-essential-travel"
+      },
+      {
+        "country": "reunion",
+        "from": null,
+        "to": "high-degree-of-caution"
+      },
+      {
+        "country": "romania",
+        "from": null,
+        "to": "normal-precautions"
+      },
+      {
+        "country": "russian-federation",
+        "from": null,
+        "to": "do-not-travel"
+      },
+      {
+        "country": "rwanda",
+        "from": null,
+        "to": "high-degree-of-caution"
+      },
+      {
+        "country": "saint-kitts-and-nevis",
+        "from": null,
+        "to": "normal-precautions"
+      },
+      {
+        "country": "saint-lucia",
+        "from": null,
+        "to": "normal-precautions"
+      }
+    ]
+  },
+  {
     "date": "2026-07-14",
     "changes": [
       {
