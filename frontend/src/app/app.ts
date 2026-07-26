@@ -39,8 +39,8 @@ export class App {
 
   openDFAWebsite() {
     const url = this.currentLang === 'ga'
-      ? 'https://www.ireland.ie/ga/dfa/taisteal-thar-lear/comhairle/'
-      : 'https://www.ireland.ie/en/dfa/overseas-travel/advice/';
+      ? 'https://www.ireland.ie/ga/dfa/taisteal-thar-lear/comhairle/?source=travelmap.ie'
+      : 'https://www.ireland.ie/en/dfa/overseas-travel/advice/?source=travelmap.ie';
     window.open(url, '_blank');
   }
 }

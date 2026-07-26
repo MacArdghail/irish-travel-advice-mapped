@@ -29,6 +29,6 @@ export class CountryCardComponent {
       slug = translation.slug;
     }
     
-    return `https://www.ireland.ie/${langPath}/${slug}/`;
+    return `https://www.ireland.ie/${langPath}/${slug}/?source=travelmap.ie`;
   }
 }

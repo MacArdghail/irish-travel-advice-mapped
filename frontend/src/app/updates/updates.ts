@@ -70,6 +70,6 @@ export class UpdatesComponent {
     const urlSlug = (typeof translation === 'object' && translation !== null && 'slug' in translation)
       ? (translation as any).slug
       : slug;
-    return `https://www.ireland.ie/${langPath}/${urlSlug}/`;
+    return `https://www.ireland.ie/${langPath}/${urlSlug}/?source=travelmap.ie`;
   }
 }
