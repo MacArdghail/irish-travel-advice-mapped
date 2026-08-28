@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-08-28",
+    "changes": [
+      {
+        "country": "israel",
+        "from": "do-not-travel",
+        "to": "avoid-non-essential-travel"
+      }
+    ]
+  },
+  {
     "date": "2026-04-24",
     "changes": [
       {
