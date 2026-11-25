@@ -1,5 +1,60 @@
 [
   {
+    "date": "2026-11-25",
+    "changes": [
+      {
+        "country": "qatar",
+        "from": "avoid-non-essential-travel",
+        "to": null
+      },
+      {
+        "country": "reunion",
+        "from": "high-degree-of-caution",
+        "to": null
+      },
+      {
+        "country": "romania",
+        "from": "normal-precautions",
+        "to": null
+      },
+      {
+        "country": "russian-federation",
+        "from": "do-not-travel",
+        "to": null
+      },
+      {
+        "country": "rwanda",
+        "from": "high-degree-of-caution",
+        "to": null
+      },
+      {
+        "country": "saint-kitts-and-nevis",
+        "from": "normal-precautions",
+        "to": null
+      },
+      {
+        "country": "saint-lucia",
+        "from": "normal-precautions",
+        "to": null
+      },
+      {
+        "country": "saint-tome-sao-tome-and-principe",
+        "from": "high-degree-of-caution",
+        "to": null
+      },
+      {
+        "country": "saint-vincent-and-the-grenadines",
+        "from": "normal-precautions",
+        "to": null
+      },
+      {
+        "country": "samoa",
+        "from": "normal-precautions",
+        "to": null
+      }
+    ]
+  },
+  {
     "date": "2026-08-28",
     "changes": [
       {
